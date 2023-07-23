@@ -11,17 +11,17 @@ public class Cameracontrol : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        targetPosition.Set(target.transform.position.x, target.transform.position.y, this.transform.position.z);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(target.gameObject != null)
+        if(target.gameObject != null)   
         {
             targetPosition.Set(target.transform.position.x, target.transform.position.y, this.transform.position.z);
 
-            this.transform.position = Vector3.Lerp(this.transform.position, targetPosition, moveSpeed * Time.deltaTime);
+            this.transform.position = Vector3.MoveTowards(this.transform.position, targetPosition, moveSpeed * Time.deltaTime);
         
         }
     }
