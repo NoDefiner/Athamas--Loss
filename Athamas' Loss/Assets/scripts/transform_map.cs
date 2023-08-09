@@ -7,15 +7,18 @@ public class transform_map : MonoBehaviour
 {
     public string transferMapName;
 
-    // Start is called before the first frame update
+    private player_move thePlayer;
+
+
     void Start()
     {
-        
+        thePlayer = FindObjectOfType<player_move>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.name == "player")
+        thePlayer.currentMapName = transferMapName;
+        if (collision.gameObject.name == "player")
         {
             SceneManager.LoadScene(transferMapName);
         }

@@ -2,22 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class player_move : MonoBehaviour
 {
+    public string currentMapName; // transferMapName 변수의 값을 저장 
 
     public float moveSpeed;
+    public Gamemanager manager;
+
 
     private Animator anim;
-    // Start is called before the first frame update
+    
     void Start()
     {
-        //DontDestroyOnLoad(gameObject); 
-
+        DontDestroyOnLoad(this.gameObject); 
 
         anim = GetComponent<Animator>();
+
     }
 
-    // Update is called once per frame
+  
     void Update()
     {
         if(Input.GetAxisRaw("Horizontal") > 0 || Input.GetAxisRaw("Horizontal")<0)
@@ -32,5 +37,29 @@ public class player_move : MonoBehaviour
 
         anim.SetFloat("Move X", Input.GetAxisRaw("Horizontal"));
         anim.SetFloat("Move Y", Input.GetAxisRaw("Vertical"));
+
+
     }
+
+    private void FixedUpdate()
+    {
+        if (DialogueManager.GetInstance().dialogueIsPlaying)
+        { 
+            moveSpeed = 0;
+            return;
+        }
+        else if(!DialogueManager.GetInstance().dialogueIsPlaying)
+        {
+            moveSpeed = 2;
+        }
+        
+        
+        
+
+
+    }
+
+
+
+
 }
