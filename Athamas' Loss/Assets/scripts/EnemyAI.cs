@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using Unity.VisualScripting;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class EnemyAI : MonoBehaviour
     Transform target;
 
     CircleCollider2D playerDetect;
+    public EnemyAnimationSwitch animationSwitch;
 
     // Start is called before the first frame update
     void Start()
@@ -36,11 +38,13 @@ public class EnemyAI : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             target = targetObject.transform;
+            animationSwitch.ChaseStart();
         }
     }
 
     void UpdatePath()
     {
+        if (target == null) return;
         if (seeker.IsDone())
             seeker.StartPath(transform.position, target.position, OnPathComplete);
     }
@@ -80,11 +84,11 @@ public class EnemyAI : MonoBehaviour
 
         if (direction.x >= 0.01f)
         {
-            enemyGFX.localScale = new Vector3(-1f, 1f, 1f);
+            transform.localScale = new Vector3(-1f, 1f, 1f);
         }
         else if (direction.x <= -0.01f)
         {
-            enemyGFX.localScale = new Vector3(1f, 1f, 1f);
+            transform.localScale = new Vector3(1f, 1f, 1f);
         }
     }
 }
