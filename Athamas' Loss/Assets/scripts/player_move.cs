@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class player_move : MonoBehaviour
 {
-    public string currentMapName; // transferMapName º¯¼öÀÇ °ªÀ» ÀúÀå 
+    public string currentMapName; // transferMapName ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 
 
     public float moveSpeed;
     public Gamemanager manager;
