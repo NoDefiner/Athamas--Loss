@@ -14,10 +14,13 @@ public class DialogueTrigger : MonoBehaviour
 
     private bool playerInRange;
 
+    AudioSource audioSource;
+
     private void Awake()
     {
         playerInRange = false;
         VisualQue.SetActive(false);
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -33,6 +36,9 @@ public class DialogueTrigger : MonoBehaviour
             if(Input.GetKeyDown("i"))
             {
                 DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+                if (!audioSource.isPlaying) {
+                    audioSource.Play();
+                }
             }
         }
         else
