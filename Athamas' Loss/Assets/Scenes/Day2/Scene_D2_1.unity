@@ -1348,6 +1348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transferMapName: Scene_D2_2
+  PerfectTransform: Scene_D2_22
 --- !u!4 &447271184
 Transform:
   m_ObjectHideFlags: 0
@@ -1605,8 +1606,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentMapName: 
+  perfectMapName: 
   moveSpeed: 2
+  walkCount: 0
+  runSpeed: 0
   manager: {fileID: 0}
+  Next: {fileID: 0}
+  nextobjectcheck: 0
 --- !u!95 &482992414
 Animator:
   serializedVersion: 5
@@ -2079,7 +2085,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VisualQue: {fileID: 1463942166}
-  inkJSON: {fileID: 4900000, guid: fc0705d4a7a7e78468b348358c7ea10c, type: 3}
+  inkJSON: {fileID: 4900000, guid: 3172a2343c7744c429b08cae1625efaf, type: 3}
 --- !u!61 &617080137
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2171,7 +2177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VisualQue: {fileID: 214227534}
-  inkJSON: {fileID: 4900000, guid: c4b443704ec51384698509bb0f5eaae4, type: 3}
+  inkJSON: {fileID: 4900000, guid: 0ec9aa9a3ada437428fc82355bde96d6, type: 3}
 --- !u!61 &687175609
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3504,6 +3510,52 @@ RectTransform:
   m_AnchoredPosition: {x: 162.86, y: 19.7}
   m_SizeDelta: {x: 479.12, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1314194054
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1314194056}
+  - component: {fileID: 1314194055}
+  m_Layer: 0
+  m_Name: Startpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1314194055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314194054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d60a159bbdf0934787b41255f3e24d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startpoint: Scene_D2_1
+  PerfectStart: Scene_D2_11
+--- !u!4 &1314194056
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314194054}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.785, y: 0.43, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1334205691
 GameObject:
   m_ObjectHideFlags: 0
@@ -4296,7 +4348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VisualQue: {fileID: 1353071242}
-  inkJSON: {fileID: 4900000, guid: a934071c6e23f814c97e2b55f782832b, type: 3}
+  inkJSON: {fileID: 4900000, guid: 94a10be5e46363342adc27b1eefd1815, type: 3}
 --- !u!61 &1924661426
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DatabaseManager : MonoBehaviour
+/*public class DatabaseManager : MonoBehaviour
 {
     static public DatabaseManager instance;
 
@@ -33,4 +33,4 @@ public class DatabaseManager : MonoBehaviour
     {
         itemList.Add(new items(10001, "수첩", "내가 쓰던 수첩이다.", items.ItemType.Use));
     }
-}
+}*/

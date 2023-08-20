@@ -1,84 +1,84 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-using UnityEngine;
-using UnityEngine.UI;
+// using System.Collections;
+// using System.Collections.Generic;
+// using TMPro;
+// using UnityEngine;
+// using UnityEngine.UI;
 
-/*public class Inventory : MonoBehaviour
-{
-    private OrderManager theOrder;
-    private InventorySlot[] slots;
+// /*public class Inventory : MonoBehaviour
+// {
+//     private OrderManager theOrder;
+//     private InventorySlot[] slots;
 
-    private List<items> inventoryItemList;
-
-
-    public TMP_Text Description_Text;
-
-    public Transform tf; //slot ºÎ¸ð°´Ã¼
-
-    public GameObject go;
-    private int selectedItem; // ¼±ÅÃµÈ ¾ÆÀÌÅÛ
-
-    private bool activated; // ÀÎº¥ È°¼ºÈ­ true
-    private bool itemActivated; //¾ÆÀÌÅÛ È°¼ºÈ­ true 
-    private bool stopKeyInput; //Å°ÀÔ·Â Á¦ÇÑ. 
-    private bool preventExec; //Áßº¹½ÇÇà Á¦ÇÑ . 
-
-    private WaitForSeconds waitTime = new WaitForSeconds(0.01f);
+//     private List<items> inventoryItemList;
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        theOrder = FindObjectOfType<OrderManager>();
-        inventoryItemList = new List<items>();
-        slots = tf.GetComponentsInChildren<InventorySlot>();
+//     public TMP_Text Description_Text;
 
-    }
+//     public Transform tf; //slot ï¿½Î¸ï¿½Ã¼
 
-    public void ShowItem()
-    {
-        for (int i = 0; i < inventoryItemList.Count; i++)
-        {
-            slots[i].gameObject.SetActive(true);
-            slots[i].Additem(inventoryItemList[i]);
+//     public GameObject go;
+//     private int selectedItem; // ï¿½ï¿½ï¿½Ãµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-            SelectedItem();
-        }
-    }
-    public void SelectedItem()
-    {
-        if (inventoryItemList.Count > 0)
-        {
-            Description_Text.text = inventoryItemList[selectedItem].itemDescription;
-        }
-        else
-        {
-            Description_Text.text = "¾ÆÀÌÅÛÀ» ¼ÒÀ¯ÇÏ°í ÀÖÁö ¾Ê½À´Ï´Ù."
-        }
-    }
+//     private bool activated; // ï¿½Îºï¿½ È°ï¿½ï¿½È­ true
+//     private bool itemActivated; //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È°ï¿½ï¿½È­ true 
+//     private bool stopKeyInput; //Å°ï¿½Ô·ï¿½ ï¿½ï¿½ï¿½ï¿½. 
+//     private bool preventExec; //ï¿½ßºï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ . 
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (!stopKeyInput)
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                activated = !activated;
+//     private WaitForSeconds waitTime = new WaitForSeconds(0.01f);
 
-                if (activated)
-                {
-                    theOrder.NotMove();
-                    go.SetActive(true);
-                    itemActivated = false;
 
-                }
-                else
-                {
+//     // Start is called before the first frame update
+//     void Start()
+//     {
+//         theOrder = FindObjectOfType<OrderManager>();
+//         inventoryItemList = new List<items>();
+//         slots = tf.GetComponentsInChildren<InventorySlot>();
 
-                }
-            }
-        }
-    }
-}*/
+//     }
+
+//     public void ShowItem()
+//     {
+//         for (int i = 0; i < inventoryItemList.Count; i++)
+//         {
+//             slots[i].gameObject.SetActive(true);
+//             slots[i].Additem(inventoryItemList[i]);
+
+//             SelectedItem();
+//         }
+//     }
+//     public void SelectedItem()
+//     {
+//         if (inventoryItemList.Count > 0)
+//         {
+//             Description_Text.text = inventoryItemList[selectedItem].itemDescription;
+//         }
+//         else
+//         {
+//             Description_Text.text = "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½."
+//         }
+//     }
+
+//     // Update is called once per frame
+//     void Update()
+//     {
+//         if (!stopKeyInput)
+//         {
+//             if (Input.GetKeyDown(KeyCode.E))
+//             {
+//                 activated = !activated;
+
+//                 if (activated)
+//                 {
+//                     theOrder.NotMove();
+//                     go.SetActive(true);
+//                     itemActivated = false;
+
+//                 }
+//                 else
+//                 {
+
+//                 }
+//             }
+//         }
+//     }
+// }*/

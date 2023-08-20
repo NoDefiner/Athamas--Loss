@@ -26,6 +26,9 @@ public class player_move : MonoBehaviour
 
     public Gamemanager manager;
     private Animator anim;
+
+    public NextObjectcheck Next;
+    public bool nextobjectcheck = false;
     
     void Start()
     {
@@ -41,7 +44,7 @@ public class player_move : MonoBehaviour
             Destroy(this.gameObject);
         }
         
-
+        
     }
 
 
@@ -121,6 +124,16 @@ public class player_move : MonoBehaviour
     void Update()
     {
 
+        Next = FindObjectOfType<NextObjectcheck>();
+        if(Input.GetKeyDown("k"))
+        {
+            if (Next.NextObjectchecking == true)
+            {
+                nextobjectcheck = true;
+            }
+        }
+        
+
         /*if (canMove)
         {
             if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
@@ -150,12 +163,17 @@ public class player_move : MonoBehaviour
         }
         else if (!DialogueManager.GetInstance().dialogueIsPlaying)
         {
-            moveSpeed = 4;
+            moveSpeed = 8;
         }
 
+        
 
     }
 
+    
+
+    
+   
 
 
 
